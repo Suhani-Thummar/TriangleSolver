@@ -13,13 +13,13 @@ namespace TriangleTestSuhani
         public void TestClass()
         {
             //arrange
-            int firstSide = 60;
-            int secondSide = 60;
-            int thirdSide = 60;
+            int firstAngle = 60;
+            int secondAngle = 60;
+            int thirdAngle =  60;
             string expected = "The triangle is valid and is an EQUILATERAL";
 
             //Act
-            string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+            string actual = Triangle.AnalyzeTriangle(firstAngle, secondAngle, thirdAngle);
 
             //Assert
             Assert.AreEqual(expected, actual);
