@@ -28,13 +28,14 @@ namespace TriangleTestSuhani
 
         }
 
+        [Test]
         // test-2.A ---- ISOSCELES test case 1 is perfromed ----
         public void ValideTringle_InputTest_1_ForIsosceles()
         {
             //Arragne
-            int firstSide = 40;
-            int secondSide = 40;
-            int thirdSide = 100;
+            int firstSide = 50;
+            int secondSide = 50;
+            int thirdSide = 80;
 
 
             string expected = "The triangle is valid and is an ISOSCELES";
@@ -47,6 +48,7 @@ namespace TriangleTestSuhani
 
         }
 
+        [Test]
         // test-2.B ---- ISOSCELES test case 2 is perfromed ----
         public void ValideTringle_InputTest_2_ForIsosceles()
         {
@@ -66,6 +68,7 @@ namespace TriangleTestSuhani
 
         }
 
+        [Test]
         // test-2.C ---- ISOSCELES test case 3 is perfromed ----
         public void ValideTringle_InputTest_3_ForIsosceles()
         {
@@ -85,6 +88,7 @@ namespace TriangleTestSuhani
 
         }
 
+        [Test]
         // test-3.A ---- SCALENE test case 1 is perfromed ----
         public void ValideTringle_InputTest1_ForScalane()
         {
@@ -105,6 +109,7 @@ namespace TriangleTestSuhani
 
         }
 
+        [Test]
         // test-3.B ---- SCALENE test case 2 is perfromed ----
         public void ValideTringle_InputTest2_ForScalane()
         {
@@ -125,6 +130,7 @@ namespace TriangleTestSuhani
 
         }
 
+        [Test]
         // test-3.C ---- SCALENE test case 3 is perfromed ----
         public void ValideTringle_InputTest3_ForScalane()
         {
@@ -145,6 +151,7 @@ namespace TriangleTestSuhani
 
         }
 
+        [Test]
         // test-3.D ---- SCALENE test case 4 is perfromed ----
         public void ValideTringle_InputTest4_ForScalane()
         {
@@ -165,6 +172,7 @@ namespace TriangleTestSuhani
 
         }
 
+        [Test]
         // test-3.E ---- SCALENE test case 5 is perfromed ----
         public void ValideTringle_InputTest5_ForScalane()
         {
@@ -184,6 +192,7 @@ namespace TriangleTestSuhani
 
         }
 
+        [Test]
         // test-4.A ---- Verifying ZERO length test case 1 is perfromed ----
         public void ValideTringle_InputTest1_ForZeroLength()
         {
@@ -205,6 +214,7 @@ namespace TriangleTestSuhani
 
         }
 
+        [Test]
         // test-4.B ---- Verifying ZERO length test case 2 is perfromed ----
         public void ValideTringle_InputTest2_ForZeroLength()
         {
@@ -227,6 +237,7 @@ namespace TriangleTestSuhani
 
         }
 
+        [Test]
         // test-4.C ---- Verifying ZERO length test case 3 is perfromed ----
         public void ValideTringle_InputTest3_ForZeroLength()
         {
@@ -248,6 +259,62 @@ namespace TriangleTestSuhani
 
         }
 
+        [Test]
+        // test-5.A ---- INVALID test case 1 is perfromed ----
+        public void ValideTringle_InputTest1_ForInvalidResponse()
+        {
+            //Arragne
+            int firstSide = 20;
+            int secondSide = 60;
+            int thirdSide = 180;
+
+
+            string expected = "A triangle cannot be formed with those numbers";
+
+            //Act
+            string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        // test-5.B ---- INVALID test case 2 is perfromed ----
+        public void ValideTringle_InputTest2_ForInvalidResponse()
+        {
+            //Arragne
+            int firstSide = 80;
+            int secondSide = 250;
+            int thirdSide = 10;
+
+
+            string expected = "A triangle cannot be formed with those numbers";
+
+            //Act
+            string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        // test-5.C ---- INVALID test case 3 is perfromed ----
+        public void ValideTringle_InputTest3_ForInvalidResponse()
+        {
+            //Arragne
+            int firstSide = 120;
+            int secondSide = 5;
+            int thirdSide = 10;
+
+
+            string expected = "A triangle cannot be formed with those numbers";
+
+            //Act
+            string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
 
     }
 }
