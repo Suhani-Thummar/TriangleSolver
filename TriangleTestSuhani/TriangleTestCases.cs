@@ -184,5 +184,70 @@ namespace TriangleTestSuhani
 
         }
 
+        // test-4.A ---- Verifying ZERO length test case 1 is perfromed ----
+        public void ValideTringle_InputTest1_ForZeroLength()
+        {
+
+            //Arrange
+            int firstSide = 40;
+            int secondSide = 0;
+            int thirdSide = 90;
+
+
+            string expected = "At least one side of your triangle has a zero length and is thus invalid";
+
+            //Act
+            string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+
+        }
+
+        // test-4.B ---- Verifying ZERO length test case 2 is perfromed ----
+        public void ValideTringle_InputTest2_ForZeroLength()
+        {
+
+
+            //Arrange
+            int firstSide = 0;
+            int secondSide = 180;
+            int thirdSide = 0;
+
+
+            string expected = "At least one side of your triangle has a zero length and is thus invalid";
+
+            //Act
+            string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+
+        }
+
+        // test-4.C ---- Verifying ZERO length test case 3 is perfromed ----
+        public void ValideTringle_InputTest3_ForZeroLength()
+        {
+
+            //Arrange
+            int firstSide = 100;
+            int secondSide = 80;
+            int thirdSide = 0;
+
+
+            string expected = "At least one side of your triangle has a zero length and is thus invalid";
+
+            //Act
+            string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+
+        }
+
+
     }
 }
